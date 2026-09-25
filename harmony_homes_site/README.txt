@@ -1,6 +1,6 @@
 # Harmony Homes Independent Living, LLC Website
 
-This is a static HTML/CSS/JavaScript website built for quick editing in VS Code and deployment to GoDaddy hosting.
+This HTML/CSS/JavaScript website now uses the Node backend in the repository root for contact email via Resend. Follow ../README.md for current setup and deployment instructions. Static-only hosting will not process the contact form.
 
 ## Pages Included
 - Home
@@ -37,11 +37,10 @@ Photos are stored in `/assets/`.
 Replace with final approved photography if needed.
 
 ## Local Preview
-Open `index.html` in your browser, or use the VS Code Live Server extension.
+Run `npm start` from the repository root, then open http://localhost:3000.
 
 ## Deployment
-Upload all files and folders to your hosting provider's public web folder.
-For GoDaddy cPanel hosting, this is often `public_html`.
+Deploy the full repository as a Node web service. See ../README.md and ../render.yaml.
 
 ## Brand Colors
 - Malibu Blue: #008CC2

@@ -57,17 +57,19 @@
     <p><strong>Email:</strong> <a href="mailto:info@harmonyhomeslivingllc.com">info@harmonyhomeslivingllc.com</a></p>
     <p><strong>Website:</strong> <a href="https://www.harmonyhomeslivingllc.com">www.harmonyhomeslivingllc.com</a></p>
   </div>
-  <form class="contact-form card" action="mailto:info@harmonyhomeslivingllc.com" method="post" enctype="text/plain">
+  <form class="contact-form card" action="/api/contact" method="post">
     <h2>Send a Message</h2>
     <div class="form-row">
-      <label>First Name<input type="text" name="first_name" autocomplete="given-name" required /></label>
-      <label>Last Name<input type="text" name="last_name" autocomplete="family-name" required /></label>
+      <label>First Name<input type="text" name="first_name" autocomplete="given-name" maxlength="80" required /></label>
+      <label>Last Name<input type="text" name="last_name" autocomplete="family-name" maxlength="80" required /></label>
     </div>
-    <label>Phone Number<input type="tel" name="phone" autocomplete="tel" /></label>
-    <label>Email Address<input type="email" name="email" autocomplete="email" /></label>
-    <label>Message<textarea name="message" rows="5" required></textarea></label>
+    <label>Phone Number (optional)<input type="tel" name="phone" autocomplete="tel" maxlength="40" /></label>
+    <label>Email Address<input type="email" name="email" autocomplete="email" maxlength="254" required /></label>
+    <label>Message<textarea name="message" rows="5" maxlength="5000" required></textarea></label>
+    <div class="form-trap" aria-hidden="true"><label>Leave this empty<input name="website" type="text" tabindex="-1" autocomplete="off" /></label></div>
     <button type="submit" class="btn btn-orange">SEND MESSAGE</button>
-
+    <p class="form-status" role="status" aria-live="polite" aria-atomic="true"></p>
+    <noscript>Please enable JavaScript to submit this form, or call 844-227-3701.</noscript>
   </form>
 </section>
 

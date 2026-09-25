@@ -185,6 +185,11 @@ h3{color:var(--black)}
 .faq-list details{border:1px solid var(--border);border-radius:12px;padding:1rem 1.2rem;margin-bottom:.8rem;background:white}
 .faq-list summary{font-weight:900;cursor:pointer;color:var(--black)}
 .contact-form label{display:block;font-weight:800;margin-bottom:1rem}
+.form-trap{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}
+.form-status{margin-bottom:0;overflow-wrap:anywhere}
+.form-status[data-state="error"]{color:#a12121}
+.form-status[data-state="success"]{color:#216833}
+.contact-form button:disabled{opacity:.65;cursor:wait}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
 input,textarea{width:100%;padding:.9rem;border:1px solid #cbd5e1;border-radius:8px;font:inherit;margin-top:.4rem}
 .header-contact,.footer-grid a,.placeholder-form{overflow-wrap:anywhere}

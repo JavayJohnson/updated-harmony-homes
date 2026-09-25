@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: harmony-homes
+    runtime: node
+    plan: free
+    buildCommand: npm install --package-lock-only --ignore-scripts
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: RESEND_API_KEY
+        sync: false
+      - key: CONTACT_FROM
+        sync: false
+      - key: CONTACT_TO
+        value: info@harmonyhomeslivingllc.com
+      - key: PUBLIC_ORIGIN
+        sync: false
